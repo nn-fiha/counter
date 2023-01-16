@@ -5,17 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Counter</title>
+  <title>Grade Calculator</title>
 </head>
 
 <body>
   <div>
-    <button onclick="increment()">+</button>
+    <input id="marks-inp" type="number" />
+    <button onclick="calculateGrade()">Calculate</button>
   </div>
   <div>
-    <p id="output"></p>
+    <h4>Grade:</h4>
+    <p id="grade"></p>
   </div>
-
   <script src="./script.js"></script>
 </body>
 
