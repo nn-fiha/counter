@@ -1,5 +1,7 @@
 "use strict";
 
+const itemTexts = [];
+
 function getInput() {
   return document.getElementById("input-box").value;
 }
@@ -11,11 +13,7 @@ function createELement(text) {
 }
 
 function doesExist(text) {
-  const items = [...document.getElementsByTagName("h2")];
-  const item = items.find(function (item) {
-    return item.innerText === text;
-  });
-  return Boolean(item); // if item !== undefined or null then it will be true
+  return itemTexts.includes(text);
 }
 
 function addItem() {
@@ -31,6 +29,7 @@ function addItem() {
     return;
   }
 
+  itemTexts.push(inputText);
   const item = createELement(inputText);
   const targetElement = document.getElementById("list");
   targetElement.appendChild(item);
